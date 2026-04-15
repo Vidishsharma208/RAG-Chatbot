@@ -140,7 +140,7 @@ python -m streamlit run app.py --server.fileWatcherType none
 
 ## 🎥 Demo
 
-👉 (Add your demo video link here)
+👉 https://drive.google.com/file/d/1X1YSBXi_n1ksExJancKXmA2X1jW4nSZF/view?usp=sharing
 
 ---
 
