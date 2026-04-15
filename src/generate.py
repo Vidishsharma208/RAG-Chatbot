@@ -16,7 +16,6 @@ def format_context(chunks: List[Dict]) -> str:
         )
     return "\n\n".join(formatted_parts)
 
-
 def build_prompt(user_query: str, retrieved_chunks: List[Dict]) -> str:
     context = format_context(retrieved_chunks)
 
@@ -28,8 +27,8 @@ Rules:
 2. Do not add outside knowledge.
 3. If the answer is not present in the context, say:
    "I could not find this in the provided document."
-4. Keep the answer clear and grounded.
-5. After the answer, mention which chunk IDs were used.
+4. Keep the answer clear, slightly detailed, and grounded.
+5. After the answer, mention the chunk IDs used.
 
 Context:
 {context}
@@ -37,10 +36,13 @@ Context:
 User Question:
 {user_query}
 
+Answer in this format:
+- Direct answer in 2-4 sentences
+- Then write: Used Chunk IDs: <ids>
+
 Answer:
 """
     return prompt.strip()
-
 
 def get_groq_client() -> Groq:
     if not GROQ_API_KEY:

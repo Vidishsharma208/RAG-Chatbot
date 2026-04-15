@@ -15,7 +15,7 @@ METADATA_PATH = os.path.join(VECTORDB_DIR, "metadata.json")
 
 # Models
 EMBEDDING_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
-LLM_MODEL_NAME = "llama3-8b-8192"
+LLM_MODEL_NAME = "llama-3.1-8b-instant"
 
 # Chunking settings
 CHUNK_SIZE_WORDS = 180
